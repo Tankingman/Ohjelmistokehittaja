@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="main1.css">
+    <title>Kyselylomake</title>
+
+  </head>
+
+  <body>
+    <h1>Mitä juo lehmä?</h1>
+    <form>
+             <select name = "dropdown">
+                <option value = "vesi" selected>Vettä</option>
+                <option value = "maito">Maitoa</option>
+                <option value = "smaito">Suklaamaitoa</option>
+                <button type="submit" name="submitbutton">Syötä</button>
+             </select>
+
+             <h1>Milloin on joulu?</h1>
+             <p>20.12</p><input type="radio" id="rbutton" name="fav_language" value="HTML">
+             <p>24.12</p><input type="radio" id="rbutton1" name="fav_language" value="HTML">
+             <p>28.12</p><input type="radio" id="rbutton2" name="fav_language" value="HTML">
+
+
+          </form>
+          <h1>Mitä näistä saa alle 17 vuotias ajaa</h1>
+          <input type="checkbox" id="checkbox1" name="checkbox1" value="pyora">
+          <label for="vehicle1"> Pyörää</label><br>
+          <input type="checkbox" id="checkbox2" name="checkbox2" value="auto">
+          <label for="vehicle2"> Autoa(jos on ajokortti)</label><br>
+          <input type="checkbox" id="checkbox3" name="checkbox3" value="mopo">
+          <label for="vehicle3"> Mopoa(jos on ajokortti)</label><br>
+
+          <section id="app">
+              <div class="container">
+                <div class="row">
+                  <div class="col-6">
+                    <div class="comment">
+                  <p v-for="items in item" v-text="items"></p>
+                    </div><!--End Comment-->
+                    </div><!--End col -->
+                    </div><!-- End row -->
+                <div class="row">
+                  <div class="col-6">
+                <textarea type="text" class="input" placeholder="Kirjoita kommentti" v-model="newItem" @keyup.enter="addItem()"></textarea>
+                    <button v-on:click="addItem()" class='primaryContained float-right' type="submit">Jos on kommentteja niin voit kirjoittaa ne tähän!</button>
+                  </div><!-- End col -->
+                </div><!--End Row -->
+              </div><!--End Container -->
+            </section><!-- end App -->
+
+
+          <input type="submit" onclick="return confirm('Oletko varma, että haluat lähettä vastauksesi?')" />
+          
+
+
+
+  </body>
+
+</html>
